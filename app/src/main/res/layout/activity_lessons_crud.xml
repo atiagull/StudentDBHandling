@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LessonsCRUD">
+
+    <EditText
+        android:id="@+id/etSabaq"
+        android:layout_width="291dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Sabaq"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etSabqi"
+        android:layout_width="287dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Sabqi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etSabaq"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etSabaq"
+        app:layout_constraintTop_toBottomOf="@+id/etSabaq" />
+
+    <EditText
+        android:id="@+id/etManzil"
+        android:layout_width="282dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Manzil"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etSabqi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etSabqi"
+        app:layout_constraintTop_toBottomOf="@+id/etSabqi" />
+
+    <Button
+        android:id="@+id/btnUpdateLesson"
+        android:layout_width="245dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="28dp"
+        android:text="Update Lesson"
+        app:layout_constraintBottom_toTopOf="@+id/txtSabaq"
+        app:layout_constraintEnd_toEndOf="@+id/etManzil"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="@+id/etManzil"
+        app:layout_constraintTop_toBottomOf="@+id/etManzil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtSabqi"
+        android:layout_width="214dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="44dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/txtManzil"
+        app:layout_constraintEnd_toEndOf="@+id/txtSabaq"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSabaq" />
+
+    <TextView
+        android:id="@+id/txtManzil"
+        android:layout_width="214dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="84dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtSabqi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSabqi" />
+
+    <TextView
+        android:id="@+id/txtSabaq"
+        android:layout_width="214dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="44dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/txtSabqi"
+        app:layout_constraintEnd_toEndOf="@+id/etManzil"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="@+id/etManzil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
