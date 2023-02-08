@@ -32,12 +32,12 @@ public class loginForm extends AppCompatActivity {
                 Log.d("msg"," naem: "+ name + "  pass: " +pass);
                 if(name.equals("admin") && pass.equals("admin"))
                 {
-                    Intent intent = new Intent(loginForm.this, MainActivity.class);
+                    Intent intent = new Intent(loginForm.this, CrudOptions.class);
                     startActivity(intent);
                 }
                 else
                 {
-                    Toast. makeText(getApplicationContext(),"Invalid credentials!hh " + name + " " + pass,Toast. LENGTH_SHORT).show();
+                    Toast. makeText(getApplicationContext(),"Invalid credentials! " + name + " " + pass,Toast. LENGTH_SHORT).show();
 
                 }
             }

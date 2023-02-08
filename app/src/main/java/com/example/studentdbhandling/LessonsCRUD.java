@@ -47,6 +47,9 @@ public class LessonsCRUD extends AppCompatActivity {
         txtSabaq.setText(sabaq);
         txtSabqi.setText(sabqi);
         txtManzil.setText(manzil);
+        etSabaq.setText(sabaq);
+        etSabqi.setText(sabqi);
+        etManzil.setText(manzil);
 
         myHandler =  new MyDbHandler(this);
 

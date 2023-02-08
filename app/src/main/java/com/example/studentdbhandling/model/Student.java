@@ -16,6 +16,9 @@ public class Student {
     public Student(String name,String rollno) {
         this.name = name;
         this.rollNo = rollno;
+        sabaq = "";
+        sabqi = "";
+        manzil = "";
     }
 
     public Student(String name,String rollno, String sabaq, String sabqi, String manzil) {
@@ -59,7 +62,7 @@ public class Student {
     }
     @Override
     public String toString() {
-        return "Student [name=" + name +",rollno = "+ rollNo + ",id = "+ id + ", sabaq=" + sabaq + ", manzil=" + manzil + ", sabqi=" + sabqi + "]";
+        return "Student [name=" + name +",rollno = "+ rollNo + ",id = "+ id + ", sabaq= " + sabaq + ", manzil= " + manzil + ", sabqi= " + sabqi + "]";
     }
 
     public String getRollNo() {

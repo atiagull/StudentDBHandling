@@ -30,7 +30,6 @@ public class MyDbHandler extends SQLiteOpenHelper{
                 + Params.S_COLUMN_SABQI + " TEXT"
                 + ")";
         db.execSQL(sql);
-        Log.d("msg","on create called " + sql);
     }
 
     @Override
@@ -51,7 +50,31 @@ public class MyDbHandler extends SQLiteOpenHelper{
 
         db.insert(Params.S_TABLE_NAME,null,values);
         db.close();
-        Log.d("msg","on insert called " + std.getName() + " " + std.getRollNo());
+    }
+    public Student getStudent(int id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String query= "SELECT * FROM "+ Params.S_TABLE_NAME + " WHERE " + Params.S_COLUMN_ID + " = " + id;
+        Cursor cursor = db.rawQuery(query,null);
+        Student std = new Student();
+        if(cursor.moveToFirst())
+        {
+            do {
+                std.setId(Integer.parseInt(cursor.getString(0)));
+                std.setRollNo(cursor.getString(1));
+                std.setName(cursor.getString(2));
+                std.setSabaq(cursor.getString(3));
+                std.setManzil(cursor.getString(4));
+                std.setSabqi(cursor.getString(5));
+            }while (cursor.moveToNext());
+        }
+        return std;
+    }
+    public void deleteStudent(String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(Params.S_TABLE_NAME, Params.S_COLUMN_ID + " = ?", new String[] {id});
+        db.close();
     }
 
     public int updateStudent(Student std)
@@ -64,7 +87,6 @@ public class MyDbHandler extends SQLiteOpenHelper{
         values.put(Params.S_COLUMN_SABAQ,std.getSabaq());
         values.put(Params.S_COLUMN_MANZIL,std.getManzil());
         values.put(Params.S_COLUMN_SABQI,std.getSabqi());
-        Log.d("msg","student updatedjdj s9403459888888888888888888" + std);
         return db.update(Params.S_TABLE_NAME,values,Params.S_COLUMN_ID + " = ?", new String[]{String.valueOf(std.getId())});
     }
 

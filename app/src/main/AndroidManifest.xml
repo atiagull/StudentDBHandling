@@ -12,8 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentDbHandling"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".CrudOptions"
+            android:exported="false">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".loginForm" />
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StudentCRUD"
+            android:exported="false">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CrudOptions" />
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".loginForm"
             android:exported="true">
@@ -42,15 +62,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".loginForm" />
+                android:value=".CrudOptions" />
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
