@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrudOptions">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="23dp"
+        android:text="Choose from following options:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLessonCrud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGitLink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="289dp"
+        android:text="GIT LINK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStudentCrud" />
+
+    <Button
+        android:id="@+id/btnLessonCrud"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:text="LESSON CRUD"
+        app:layout_constraintBottom_toTopOf="@+id/btnStudentCrud"
+        app:layout_constraintEnd_toEndOf="@+id/btnStudentCrud"
+        app:layout_constraintStart_toStartOf="@+id/btnStudentCrud"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnStudentCrud"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:text="STUDENT CRUD"
+        app:layout_constraintBottom_toTopOf="@+id/btnGitLink"
+        app:layout_constraintEnd_toEndOf="@+id/btnGitLink"
+        app:layout_constraintStart_toStartOf="@+id/btnGitLink"
+        app:layout_constraintTop_toBottomOf="@+id/btnLessonCrud" />
+</androidx.constraintlayout.widget.ConstraintLayout>
